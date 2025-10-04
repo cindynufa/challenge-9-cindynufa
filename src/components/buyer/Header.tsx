@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 export default function Header() {
   return (
     <header className="fixed w-full h-auto top-0 z-50 bg-white shadow-custom">
-      <div className="flex flex-row w-1440 h-84 px-120 justify-between items-center">
+      <div className="flex flex-row w-auto h-84 px-120 justify-between items-center">
         {/* Logo */}
         <Logo />
 
