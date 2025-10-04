@@ -3,11 +3,11 @@ import Image from 'next/image';
 type ProductThumbnailProps = {
   src: string;
   alt: string;
-  heading: string;
-  price: string;
-  rate: string;
-  text: string;
-  label: string;
+  heading?: string;
+  price?: string;
+  rate?: string;
+  text?: string;
+  label?: string;
 };
 
 export default function ProductThumbnail({
@@ -20,7 +20,7 @@ export default function ProductThumbnail({
   label,
 }: ProductThumbnailProps) {
   return (
-    <div className="flex flex-col w-285 h-auto border rounded-[0.75rem] bg-white shadow-custom">
+    <div className="flex flex-col w-auto h-auto border rounded-[0.75rem] bg-white shadow-custom">
       <Image
         src={src}
         alt={alt}
