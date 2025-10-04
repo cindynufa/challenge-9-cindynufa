@@ -3,6 +3,11 @@ import Footer from '@/components/buyer/Footer';
 import Header from '@/components/buyer/Header';
 import { Button } from '@/components/ui/button';
 import ProductThumbnail from '@/components/buyer/ProductThumbnail';
+import Link from 'next/link';
+
+const products = [
+  { id: 1, name: 'Product 1', src: '/assets/images/img-product-1.png' },
+];
 
 export default function HomePage() {
   return (
@@ -40,18 +45,20 @@ export default function HomePage() {
           Featured Product
         </h3>
         <div className="grid grid-cols-4 w-1200 h-auto gap-5">
-          <div>
-            <ProductThumbnail
-              src="/assets/images/img-product-1.png"
-              alt="Product Thumbnail"
-              heading="Sneakers Court Minimalis"
-              price="Rp275.000"
-              rate="4.9"
-              text="10 Sold"
-              label="Toko Barokah Jaya"
-            />
-          </div>
-          <div>
+          {products.map((product) => (
+            <Link key={product.id} href={`/products/${product.id}`}>
+              <ProductThumbnail
+                src="/assets/images/img-product-1.png"
+                alt="Product Thumbnail"
+                heading="Sneakers Court Minimalis"
+                price="Rp275.000"
+                rate="4.9"
+                text="10 Sold"
+                label="Toko Barokah Jaya"
+              />
+            </Link>
+          ))}
+          <Link href="/app/buyer/detailPage/page.tsx">
             <ProductThumbnail
               src="/assets/images/img-product-2.png"
               alt="Product Thumbnail"
@@ -61,8 +68,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </Link>
+          <a href="/app/buyer/detailPage/page.tsx">
             <ProductThumbnail
               src="/assets/images/img-product-3.png"
               alt="Product Thumbnail"
@@ -72,8 +79,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-4.png"
               alt="Product Thumbnail"
@@ -83,8 +90,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-5.png"
               alt="Product Thumbnail"
@@ -94,8 +101,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-6.png"
               alt="Product Thumbnail"
@@ -105,8 +112,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-7.png"
               alt="Product Thumbnail"
@@ -116,8 +123,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-8.png"
               alt="Product Thumbnail"
@@ -127,8 +134,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-9.png"
               alt="Product Thumbnail"
@@ -138,8 +145,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-10.png"
               alt="Product Thumbnail"
@@ -149,8 +156,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-11.png"
               alt="Product Thumbnail"
@@ -160,8 +167,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-12.png"
               alt="Product Thumbnail"
@@ -171,8 +178,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-13.png"
               alt="Product Thumbnail"
@@ -182,8 +189,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-14.png"
               alt="Product Thumbnail"
@@ -193,8 +200,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-15.png"
               alt="Product Thumbnail"
@@ -204,8 +211,8 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
-          <div>
+          </a>
+          <a>
             <ProductThumbnail
               src="/assets/images/img-product-16.png"
               alt="Product Thumbnail"
@@ -215,7 +222,7 @@ export default function HomePage() {
               text="10 Sold"
               label="Toko Barokah Jaya"
             />
-          </div>
+          </a>
         </div>
         <Button className="w-220 h-12 p-2 border rounded-12 border-neutral-300 bg-white text-base font-semibold text-neutral-950 cursor-pointer">
           Load More
