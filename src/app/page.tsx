@@ -1,4 +1,4 @@
-import HomePage from './buyer/home';
+import HomePage from './buyer/page';
 
 export default function Home() {
   return (
