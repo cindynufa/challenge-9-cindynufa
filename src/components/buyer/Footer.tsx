@@ -3,7 +3,7 @@ import Logo from '../ui/logo';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-row w-1440 h-auto mt-132 py-20 px-150 justify-between border-t border-neutral-300">
+    <footer className="flex flex-row w-auto h-auto mt-132 py-20 px-150 justify-between border-t border-neutral-300">
       <div className="flex flex-col w-380 gap-10">
         <div className="flex flex-col gap-22">
           <Logo />
