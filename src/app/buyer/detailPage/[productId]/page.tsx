@@ -333,21 +333,23 @@ export default async function DetailPage({ params }: DetailPageProps) {
               </div>
               <div className="w-auto border border-neutral-300"></div>
               <div className="flex flex-row justify-between">
-                <div className="flex flex-row gap-4">
-                  {/* <storeProfile/> */}
-                  <Avatar>
-                    <AvatarImage src="/assets/images/img-store-1.png" />
-                    <AvatarFallback>Photo Profile Store</AvatarFallback>
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <h3 className="text-base font-bold text-neutral-950">
-                      {product.label}
-                    </h3>
-                    <p className="text-base text-neutral-950">
-                      Jakarta Selatan
-                    </p>
+                {/* <storeProfile/> */}
+                <Link href="/buyer/storePage">
+                  <div className="flex flex-row gap-4">
+                    <Avatar>
+                      <AvatarImage src="/assets/images/img-store-1.png" />
+                      <AvatarFallback>Photo Profile Store</AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                      <h3 className="text-base font-bold text-neutral-950">
+                        {product.label}
+                      </h3>
+                      <p className="text-base text-neutral-950">
+                        Jakarta Selatan
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <div>
                   <Button className="w-40 h-12 p-2 gap-1.5 border border-neutral-300 bg-white text-base font-semibold text-neutral-950">
                     See Store
