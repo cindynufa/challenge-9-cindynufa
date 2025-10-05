@@ -431,15 +431,47 @@ export default async function DetailPage({ params }: DetailPageProps) {
             <h3 className="text-display-md font-bold text-neutral-950">
               Related Product
             </h3>
-
-            <div className="grow flex flex-row w-full gap-5">
+            <div className="grow flex flex-row w-full gap-5 justify-between">
               <Link href="/buyer/detailPage/4">
                 <ProductThumbnail
-                  src={product.image}
+                  src='/assets/images/img-product-5.png'
                   alt={product.name}
-                  heading={product.heading}
-                  price={product.price}
-                  rate={product.rate}
+                  heading='Overshirt Utility'
+                  price='Rp375.000'
+                  rate='4.5'
+                  text={product.text}
+                  label={product.label}
+                />
+              </Link>
+              <Link href="/buyer/detailPage/5">
+                <ProductThumbnail
+                  src='/assets/images/img-product-6.png'
+                  alt={product.name}
+                  heading='Sweater Rajut Cable'
+                  price='Rp1.300.000'
+                  rate='4.8'
+                  text={product.text}
+                  label={product.label}
+                />
+              </Link>
+              <Link href="/buyer/detailPage/6">
+                <ProductThumbnail
+                  src='/assets/images/img-product-7.png'
+                  alt={product.name}
+                  heading='Syal Wol Kotak'
+                  price='Rp220.000'
+                  rate='4.9'
+                  text={product.text}
+                  label={product.label}
+                />
+              </Link>
+              <Link href="/buyer/detailPage/7">
+                <ProductThumbnail
+                  src='/assets/images/img-product-8.png'
+                  alt={product.name}
+                  heading='Syal Wol Solid'
+                  price='Rp180.000'
+                  rate='4.7'
                   text={product.text}
                   label={product.label}
                 />
