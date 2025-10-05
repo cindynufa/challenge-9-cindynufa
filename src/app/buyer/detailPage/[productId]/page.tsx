@@ -194,6 +194,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
       {/* Header */}
       <Header />
 
+      {/* Detail Page Content */}
       <section className="w-full h-auto mt-132 px-120 gap-12">
         <div className="flex flex-col gap-6">
           <div className="flex flex-row gap-2 items-center">
@@ -434,44 +435,44 @@ export default async function DetailPage({ params }: DetailPageProps) {
             <div className="grow flex flex-row w-full gap-5 justify-between">
               <Link href="/buyer/detailPage/4">
                 <ProductThumbnail
-                  src='/assets/images/img-product-5.png'
+                  src="/assets/images/img-product-5.png"
                   alt={product.name}
-                  heading='Overshirt Utility'
-                  price='Rp375.000'
-                  rate='4.5'
+                  heading="Overshirt Utility"
+                  price="Rp375.000"
+                  rate="4.5"
                   text={product.text}
                   label={product.label}
                 />
               </Link>
               <Link href="/buyer/detailPage/5">
                 <ProductThumbnail
-                  src='/assets/images/img-product-6.png'
+                  src="/assets/images/img-product-6.png"
                   alt={product.name}
-                  heading='Sweater Rajut Cable'
-                  price='Rp1.300.000'
-                  rate='4.8'
+                  heading="Sweater Rajut Cable"
+                  price="Rp1.300.000"
+                  rate="4.8"
                   text={product.text}
                   label={product.label}
                 />
               </Link>
               <Link href="/buyer/detailPage/6">
                 <ProductThumbnail
-                  src='/assets/images/img-product-7.png'
+                  src="/assets/images/img-product-7.png"
                   alt={product.name}
-                  heading='Syal Wol Kotak'
-                  price='Rp220.000'
-                  rate='4.9'
+                  heading="Syal Wol Kotak"
+                  price="Rp220.000"
+                  rate="4.9"
                   text={product.text}
                   label={product.label}
                 />
               </Link>
               <Link href="/buyer/detailPage/7">
                 <ProductThumbnail
-                  src='/assets/images/img-product-8.png'
+                  src="/assets/images/img-product-8.png"
                   alt={product.name}
-                  heading='Syal Wol Solid'
-                  price='Rp180.000'
-                  rate='4.7'
+                  heading="Syal Wol Solid"
+                  price="Rp180.000"
+                  rate="4.7"
                   text={product.text}
                   label={product.label}
                 />
