@@ -9,13 +9,12 @@ import {
 } from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar';
+import StoreProfile from '@/components/ui/store-profile';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import ProductReview from '@/components/buyer/ProductReview';
 import Link from 'next/link';
 import ProductThumbnail from '@/components/buyer/ProductThumbnail';
 import Footer from '@/components/buyer/Footer';
-// import storeProfile from '@/components/ui/store-profile';
 
 interface DetailPageProps {
   params: Promise<{ productId: string }>;
@@ -333,23 +332,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
               </div>
               <div className="w-auto border border-neutral-300"></div>
               <div className="flex flex-row justify-between">
-                {/* <storeProfile/> */}
-                <Link href="/buyer/storePage">
-                  <div className="flex flex-row gap-4">
-                    <Avatar>
-                      <AvatarImage src="/assets/images/img-store-1.png" />
-                      <AvatarFallback>Photo Profile Store</AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col">
-                      <h3 className="text-base font-bold text-neutral-950">
-                        {product.label}
-                      </h3>
-                      <p className="text-base text-neutral-950">
-                        Jakarta Selatan
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+                <StoreProfile />
                 <div>
                   <Button className="w-40 h-12 p-2 gap-1.5 border border-neutral-300 bg-white text-base font-semibold text-neutral-950">
                     See Store
