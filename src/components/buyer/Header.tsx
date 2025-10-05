@@ -2,6 +2,7 @@ import Logo from '../ui/logo';
 import Image from 'next/image';
 import { Input } from '../ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -56,17 +57,21 @@ export default function Header() {
               height={20}
             />
           </div>
+
           <div className="flex flex-row gap-3">
-            <div className="flex flex-row py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
-              <Image
-                src="/assets/icons/icon-store.png"
-                alt="Icon Store"
-                className="w-5 h-5"
-                width={20}
-                height={20}
-              />
-              <p>Open Store</p>
-            </div>
+            <Link href="/buyer/storePage">
+              <div className="flex flex-row py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
+                <Image
+                  src="/assets/icons/icon-store.png"
+                  alt="Icon Store"
+                  className="w-5 h-5"
+                  width={20}
+                  height={20}
+                />
+                <p>Open Store</p>
+              </div>
+            </Link>
+
             <div className="flex flex-row py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
               <Avatar>
                 <AvatarImage src="/assets/images/img-header-1.png" />
