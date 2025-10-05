@@ -15,6 +15,7 @@ import ProductReview from '@/components/buyer/ProductReview';
 import Link from 'next/link';
 import ProductThumbnail from '@/components/buyer/ProductThumbnail';
 import Footer from '@/components/buyer/Footer';
+// import storeProfile from '@/components/ui/store-profile';
 
 interface DetailPageProps {
   params: Promise<{ productId: string }>;
@@ -333,6 +334,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
               <div className="w-auto border border-neutral-300"></div>
               <div className="flex flex-row justify-between">
                 <div className="flex flex-row gap-4">
+                  {/* <storeProfile/> */}
                   <Avatar>
                     <AvatarImage src="/assets/images/img-store-1.png" />
                     <AvatarFallback>Photo Profile Store</AvatarFallback>
