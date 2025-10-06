@@ -24,8 +24,8 @@ export default function ProductThumbnail({
       <Image
         src={src}
         alt={alt}
-        width={300}
-        height={300}
+        width={285}
+        height={285}
         className="w-full h-285 rounded-t-12"
       />
       <div className="w-full h-auto p-3 gap-0.5">
