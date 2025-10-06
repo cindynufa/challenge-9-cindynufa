@@ -40,7 +40,7 @@ export default function ProductThumbnail({
               height={20}
               className="w-6 h-6"
             />
-            <p className='text-base text-neutral-950'>{rate}</p>
+            <p className="text-base text-neutral-950">{rate}</p>
           </div>
           <Image
             src="/assets/icons/icon-ellipse.png"
@@ -49,7 +49,7 @@ export default function ProductThumbnail({
             height={3}
             className="w-0.5 h-0.5"
           />
-          <p className='text-base text-neutral-950'>{text}</p>
+          <p className="text-base text-neutral-950">{text}</p>
         </div>
         <div className="flex flex-row gap-0.5">
           <Image
@@ -59,7 +59,7 @@ export default function ProductThumbnail({
             height={20}
             className="w-6 h-6"
           />
-          <p className='text-base text-neutral-950'>{label}</p>
+          <p className="text-base text-neutral-950">{label}</p>
         </div>
       </div>
     </div>
