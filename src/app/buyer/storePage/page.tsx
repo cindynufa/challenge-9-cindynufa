@@ -1,4 +1,4 @@
-'use-client';
+"use client"
 
 import Header from '@/components/buyer/Header';
 import Footer from '@/components/buyer/Footer';
