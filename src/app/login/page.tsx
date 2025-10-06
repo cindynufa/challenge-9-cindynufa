@@ -64,7 +64,7 @@ export default function Login() {
           </Button>
           <p className="text-base text-neutral-950">
             Dont have an account?{' '}
-            <a href="#" className="font-bold">
+            <a href="/register" className="font-bold">
               <u>Register</u>
             </a>
           </p>
