@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import Header from '@/components/buyer/Header';
 import Footer from '@/components/buyer/Footer';
@@ -56,7 +56,7 @@ const products = [
   },
 ];
 
-export default async function storePage() {
+export default function storePage() {
   return (
     <>
       {/* Header */}
@@ -85,44 +85,42 @@ export default async function storePage() {
           <h3 className="text-display-md font-bold text-neutral-950">
             Product
           </h3>
-          <div className="flex flex-col mt-8 gap-5">
-            <div className="flex flex-row w-auto gap-5 justify-between">
-              {products.map((product) => (
-                <Link key={product.id} href={`/buyer/detailPage/${product.id}`}>
-                  <ProductThumbnail
-                    src={product.image}
-                    alt={product.name}
-                    heading={product.heading}
-                    price={product.price}
-                    rate={product.rate}
-                    text={product.text}
-                  />
-                </Link>
-              ))}
-            </div>
-            <div className="flex flex-row w-auto gap-5 justify-between">
-              {products.map((product) => (
-                <Link key={product.id} href={`/buyer/detailPage/${product.id}`}>
-                  <ProductThumbnail
-                    src={product.image}
-                    alt={product.name}
-                    heading={product.heading}
-                    price={product.price}
-                    rate={product.rate}
-                    text={product.text}
-                  />
-                </Link>
-              ))}
-            </div>
+          <div className="grid grid-cols-5 w-auto gap-5 justify-between">
+            {products.map((product, index) => (
+              <Link key={index} href={`/buyer/detailPage/${product.id}`}>
+                <ProductThumbnail
+                  src={product.image}
+                  alt={product.name}
+                  heading={product.heading}
+                  price={product.price}
+                  rate={product.rate}
+                  text={product.text}
+                  verify={false}
+                />
+              </Link>
+            ))}
+            {products.map((product, index) => (
+              <Link key={index} href={`/buyer/detailPage/${product.id}`}>
+                <ProductThumbnail
+                  src={product.image}
+                  alt={product.name}
+                  heading={product.heading}
+                  price={product.price}
+                  rate={product.rate}
+                  text={product.text}
+                  verify={false}
+                />
+              </Link>
+            ))}
           </div>
         </div>
 
         {/* Button */}
-      <div className="text-center">
-        <Button className="w-220 h-12 p-2 mt-10 border rounded-12 border-neutral-300 bg-white text-base font-semibold text-neutral-950 cursor-pointer">
-          Load More
-        </Button>
-      </div>
+        <div className="text-center">
+          <Button className="w-220 h-12 p-2 mt-10 border rounded-12 border-neutral-300 bg-white text-base font-semibold text-neutral-950 cursor-pointer">
+            Load More
+          </Button>
+        </div>
       </section>
 
       {/* Footer */}

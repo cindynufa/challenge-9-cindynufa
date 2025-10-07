@@ -321,6 +321,7 @@ export default function CatalogPage() {
                       rate={product.rate}
                       text={product.text}
                       label={product.label}
+                      verify={true}
                     />
                   </Link>
                 ))}

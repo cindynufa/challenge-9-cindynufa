@@ -7,6 +7,7 @@ type ProductThumbnailProps = {
   price?: string;
   rate?: string;
   text?: string;
+  verify: boolean;
   label?: string;
 };
 
@@ -17,6 +18,7 @@ export default function ProductThumbnail({
   price,
   rate,
   text,
+  verify,
   label,
 }: ProductThumbnailProps) {
   return (
@@ -26,7 +28,7 @@ export default function ProductThumbnail({
         alt={alt}
         width={285}
         height={285}
-        className="w-full h-285 rounded-t-12"
+        className="w-full rounded-t-12 aspect-square object-cover"
       />
       <div className="w-full h-auto p-3 gap-0.5">
         <h4 className="text-base text-neutral-950">{heading}</h4>
@@ -51,15 +53,20 @@ export default function ProductThumbnail({
           />
           <p className="text-base text-neutral-950">{text}</p>
         </div>
+
         <div className="flex flex-row gap-0.5">
-          <Image
-            src="/assets/icons/icon-verify.png"
-            alt="Icon Verify"
-            width={20}
-            height={20}
-            className="w-6 h-6"
-          />
-          <p className="text-base text-neutral-950">{label}</p>
+          {verify && (
+            <>
+              <Image
+                src="/assets/icons/icon-verify.png"
+                alt="Icon Verify"
+                width={20}
+                height={20}
+                className="w-6 h-6"
+              />
+              <p className="text-base text-neutral-950">{label}</p>
+            </>
+          )}
         </div>
       </div>
     </div>

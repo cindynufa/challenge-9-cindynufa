@@ -21,6 +21,7 @@ interface DetailPageProps {
 }
 
 type Product = {
+  id: number;
   image: string;
   name: string;
   heading: string;
@@ -32,6 +33,7 @@ type Product = {
 
 const products: Product[] = [
   {
+    id: 0,
     image: '/assets/images/img-product-1.png',
     name: 'Product Thumbnail',
     heading: 'Sneakers Court Minimalis',
@@ -41,33 +43,7 @@ const products: Product[] = [
     label: 'Toko Barokah Jaya',
   },
   {
-    image: '/assets/images/img-product-2.png',
-    name: 'Product Thumbnail',
-    heading: 'Kaos Crewneck Esensial',
-    price: 'Rp800.000',
-    rate: '4.8',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-3.png',
-    name: 'Product Thumbnail',
-    heading: 'Tas Selempang Klasik',
-    price: 'Rp1.600.000',
-    rate: '4.7',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-4.png',
-    name: 'Product Thumbnail',
-    heading: 'Kaos Soft Touch',
-    price: 'Rp650.000',
-    rate: '4.6',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
+    id: 4,
     image: '/assets/images/img-product-5.png',
     name: 'Product Thumbnail',
     heading: 'Overshirt Utility',
@@ -77,6 +53,7 @@ const products: Product[] = [
     label: 'Toko Barokah Jaya',
   },
   {
+    id: 5,
     image: '/assets/images/img-product-6.png',
     name: 'Product Thumbnail',
     heading: 'Sweater Rajut Cable',
@@ -86,6 +63,7 @@ const products: Product[] = [
     label: 'Toko Barokah Jaya',
   },
   {
+    id: 6,
     image: '/assets/images/img-product-7.png',
     name: 'Product Thumbnail',
     heading: 'Syal Wol Kotak',
@@ -95,83 +73,12 @@ const products: Product[] = [
     label: 'Toko Barokah Jaya',
   },
   {
+    id: 7,
     image: '/assets/images/img-product-8.png',
     name: 'Product Thumbnail',
     heading: 'Syal Wol Solid',
     price: 'Rp180.000',
     rate: '4.7',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-9.png',
-    name: 'Product Thumbnail',
-    heading: 'Celana Panjang Tailored',
-    price: 'Rp2.200.000',
-    rate: '4.8',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-10.png',
-    name: 'Product Thumbnail',
-    heading: 'Sneakers Harian',
-    price: 'Rp1.900.000',
-    rate: '4.9',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-11.png',
-    name: 'Product Thumbnail',
-    heading: 'Jaket Puffer Quilted',
-    price: 'Rp450.000',
-    rate: '4.6',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-12.png',
-    name: 'Product Thumbnail',
-    heading: 'Kemeja Oxford',
-    price: 'Rp950.000',
-    rate: '4.8',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-13.png',
-    name: 'Product Thumbnail',
-    heading: 'Sneakers Court Minimalis',
-    price: 'Rp275.000',
-    rate: '4.9',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-14.png',
-    name: 'Product Thumbnail',
-    heading: 'Sneakers Court Minimalis',
-    price: 'Rp275.000',
-    rate: '4.9',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-15.png',
-    name: 'Product Thumbnail',
-    heading: 'Sneakers Court Minimalis',
-    price: 'Rp275.000',
-    rate: '4.9',
-    text: '10 Sold',
-    label: 'Toko Barokah Jaya',
-  },
-  {
-    image: '/assets/images/img-product-16.png',
-    name: 'Product Thumbnail',
-    heading: 'Sneakers Court Minimalis',
-    price: 'Rp275.000',
-    rate: '4.9',
     text: '10 Sold',
     label: 'Toko Barokah Jaya',
   },
@@ -419,51 +326,24 @@ export default async function DetailPage({ params }: DetailPageProps) {
             <h3 className="text-display-md font-bold text-neutral-950">
               Related Product
             </h3>
-            <div className="grow flex flex-row w-full gap-5 justify-between">
-              <Link href="/buyer/detailPage/4">
-                <ProductThumbnail
-                  src="/assets/images/img-product-5.png"
-                  alt={product.name}
-                  heading="Overshirt Utility"
-                  price="Rp375.000"
-                  rate="4.5"
-                  text={product.text}
-                  label={product.label}
-                />
-              </Link>
-              <Link href="/buyer/detailPage/5">
-                <ProductThumbnail
-                  src="/assets/images/img-product-6.png"
-                  alt={product.name}
-                  heading="Sweater Rajut Cable"
-                  price="Rp1.300.000"
-                  rate="4.8"
-                  text={product.text}
-                  label={product.label}
-                />
-              </Link>
-              <Link href="/buyer/detailPage/6">
-                <ProductThumbnail
-                  src="/assets/images/img-product-7.png"
-                  alt={product.name}
-                  heading="Syal Wol Kotak"
-                  price="Rp220.000"
-                  rate="4.9"
-                  text={product.text}
-                  label={product.label}
-                />
-              </Link>
-              <Link href="/buyer/detailPage/7">
-                <ProductThumbnail
-                  src="/assets/images/img-product-8.png"
-                  alt={product.name}
-                  heading="Syal Wol Solid"
-                  price="Rp180.000"
-                  rate="4.7"
-                  text={product.text}
-                  label={product.label}
-                />
-              </Link>
+            <div className="grid grid-cols-4 w-full gap-5 justify-between">
+              {products.map(
+                (product, index: number) =>
+                  index > 0 && (
+                    <Link key={index} href="/buyer/detailPage/4">
+                      <ProductThumbnail
+                        src={product.image}
+                        alt={product.name}
+                        heading={product.heading}
+                        price={product.price}
+                        rate={product.rate}
+                        text={product.text}
+                        label={product.label}
+                        verify={true}
+                      />
+                    </Link>
+                  )
+              )}
             </div>
           </div>
         </div>

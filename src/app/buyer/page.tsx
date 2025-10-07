@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import Image from 'next/image';
 import Footer from '@/components/buyer/Footer';
@@ -216,6 +216,7 @@ export default function HomePage() {
                 rate={product.rate}
                 text={product.text}
                 label={product.label}
+                verify={true}
               />
             </Link>
           ))}
