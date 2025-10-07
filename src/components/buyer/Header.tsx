@@ -37,7 +37,7 @@ export default function Header() {
             <Input
               type="text"
               placeholder="Search"
-              className="text-sm text-neutral-600 border-0"
+              className="text-sm text-neutral-600 h-8 border-0"
             />
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function Header() {
 
           <div className="flex flex-row gap-3">
             <Link href="/buyer/storePage">
-              <div className="flex flex-row py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
+              <div className="flex flex-row h-11 py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
                 <Image
                   src="/assets/icons/icon-store.png"
                   alt="Icon Store"
@@ -75,7 +75,7 @@ export default function Header() {
               </div>
             </Link>
 
-            <div className="flex flex-row py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
+            <div className="flex flex-row h-11 py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
               <Avatar>
                 <AvatarImage src="/assets/images/img-header-1.png" />
                 <AvatarFallback>Photo Profile</AvatarFallback>
