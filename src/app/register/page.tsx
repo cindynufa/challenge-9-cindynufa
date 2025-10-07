@@ -1,3 +1,5 @@
+'use client'; 
+
 import {
   Card,
   CardContent,
@@ -36,13 +38,7 @@ export default function Register() {
                 className="h-14 py-2 px-3"
                 required
               />
-              <Input
-                id="phone"
-                type="number"
-                placeholder="Number Phone"
-                className="h-14 py-2 px-3"
-                required
-              />
+
               <Input
                 id="email"
                 type="email"
@@ -63,7 +59,7 @@ export default function Register() {
                   alt="Icon Eye"
                   width={20}
                   height={20}
-                  className="absolute right-2"
+                  className="absolute right-2 cursor-pointer"
                 />
               </div>
               <div className="relative flex flex-row items-center justify-between">
@@ -79,9 +75,16 @@ export default function Register() {
                   alt="Icon Eye"
                   width={20}
                   height={20}
-                  className="absolute right-2"
+                  className="absolute right-2 cursor-pointer"
                 />
               </div>
+              <Input
+                id="avatar"
+                type="file"
+                placeholder="Avatar"
+                className="w-3xs h-10 px-3 border border-gray-400 bg-neutral-200 font-bold"
+                required
+              />
             </div>
           </form>
         </CardContent>
