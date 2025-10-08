@@ -286,15 +286,15 @@ export default function CatalogPage() {
                 <p className="text-base font-bold text-neutral-950">Sort</p>
                 <div className="relative flex flex-row w-167 h-11 py-4 px-3 gap-19 items-center border rounded-12 border-neutral-300">
                   <DropdownMenu>
-                    <DropdownMenuTrigger className="w-full px-0 border-0">
+                    <DropdownMenuTrigger className="w-full px-0 border-0 text-left">
                       Latest
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
                       <DropdownMenuLabel>Filter</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>Latest</DropdownMenuItem>
-                      <DropdownMenuItem>Latest</DropdownMenuItem>
-                      <DropdownMenuItem>Latest</DropdownMenuItem>
+                      <DropdownMenuItem>Date</DropdownMenuItem>
+                      <DropdownMenuItem>Most Order</DropdownMenuItem>
                     </DropdownMenuContent>
                     <Image
                       src="/assets/icons/icon-arrow-down.png"
