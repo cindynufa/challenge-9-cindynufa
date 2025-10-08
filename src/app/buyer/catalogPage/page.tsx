@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
 import ProductThumbnail from '@/components/buyer/ProductThumbnail';
+import { Button } from '@/components/ui/button';
 
 const products = [
   {
@@ -326,6 +327,13 @@ export default function CatalogPage() {
                   </Link>
                 ))}
               </div>
+            </div>
+
+            {/* Button */}
+            <div className="text-center">
+              <Button className="w-220 h-12 p-2 mt-10 border rounded-12 border-neutral-300 bg-white text-base font-semibold text-neutral-950 cursor-pointer">
+                Load More
+              </Button>
             </div>
           </div>
         </div>
