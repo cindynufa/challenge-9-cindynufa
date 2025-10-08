@@ -1,4 +1,4 @@
-'use client'; 
+'use client';
 
 import {
   Card,
@@ -12,8 +12,11 @@ import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/ui/logo';
+import { useRegister } from '@/hooks/useRegister';
 
 export default function Register() {
+  const { register, handleSubmit, errors, onSubmit } = useRegister();
+
   return (
     <section className="w-full h-full bground">
       <Card className="w-451 h-auto my-287 mx-auto border-neutral-200">
@@ -29,31 +32,44 @@ export default function Register() {
           </div>
         </CardHeader>
         <CardContent>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col gap-4">
               <Input
+                {...register('name')}
                 id="name"
                 type="text"
                 placeholder="Name"
                 className="h-14 py-2 px-3"
                 required
               />
-
+              {errors.name && (
+                <p className="text-sm text-accent-red">{errors.name.message}</p>
+              )}
               <Input
+                {...register('email')}
                 id="email"
                 type="email"
                 placeholder="Email"
                 className="h-14 py-2 px-3"
                 required
               />
+              {errors.email && (
+                <p className="text-sm text-accent-red">{errors.email.message}</p>
+              )}
               <div className="relative flex flex-row items-center justify-between">
                 <Input
+                  {...register('password')}
                   id="password"
                   type="password"
                   placeholder="Password"
                   className="h-14 py-2 px-3"
                   required
                 />
+                {errors.password && (
+                  <p className="text-sm text-accent-red">
+                    {errors.password.message}
+                  </p>
+                )}
                 <Image
                   src="/assets/icons/icon-eye.png"
                   alt="Icon Eye"
@@ -64,12 +80,18 @@ export default function Register() {
               </div>
               <div className="relative flex flex-row items-center justify-between">
                 <Input
+                  {...register('confirmPassword')}
                   id="password"
                   type="password"
                   placeholder="Confirm Password"
                   className="h-14 py-2 px-3"
                   required
                 />
+                {errors.confirmPassword && (
+                  <p className="text-sm text-accent-red">
+                    {errors.confirmPassword.message}
+                  </p>
+                )}
                 <Image
                   src="/assets/icons/icon-eye.png"
                   alt="Icon Eye"
@@ -79,12 +101,16 @@ export default function Register() {
                 />
               </div>
               <Input
+                {...register('avatar')}
                 id="avatar"
                 type="file"
                 placeholder="Avatar"
                 className="w-3xs h-10 px-3 border border-gray-400 bg-neutral-200 font-bold"
                 required
               />
+              {errors.avatar && (
+                <p className="text-sm text-accent-red">{errors.avatar.message as string}</p>
+              )}
             </div>
           </form>
         </CardContent>
