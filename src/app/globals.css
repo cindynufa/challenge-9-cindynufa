@@ -48,6 +48,7 @@
   --color-neutral-950: #0a0d12;
   --color-hero-banner: #f3d7a4;
   --color-hero-title: #553e32;
+  --color-accent-red: #D9206E;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -66,15 +67,18 @@
   --spacing-132: 8.25rem;
   --spacing-150: 9.375rem;
   --spacing-167: 10.438rem;
+  --spacing-168: 10.5rem;
   --spacing-180: 11.25rem;
   --spacing-196: 12.25rem;
   --spacing-200: 12.5rem;
+  --spacing-202: 12.625rem;
   --spacing-220: 13.75rem;
   --spacing-266: 16.625rem;
   --spacing-285: 17.813rem;
   --spacing-287: 17.938rem;
   --spacing-312: 19.5rem;
   --spacing-340: 21.25rem;
+  --spacing-352: 22rem;
   --spacing-376: 23.5rem;
   --spacing-380: 23.75rem;
   --spacing-402: 25.125rem;
@@ -85,6 +89,7 @@
   --spacing-495: 30.938rem;
   --spacing-511: 31.938rem;
   --spacing-514: 32.125rem;
+  --spacing-808: 50.5rem;
   --spacing-814: 50.875rem;
   --spacing-1200: 75rem;
   --spacing-1440: 90rem;
