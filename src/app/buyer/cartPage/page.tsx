@@ -369,9 +369,11 @@ export default function CartPage() {
             <p className="text-lg text-neutral-950">Total</p>
             <p className="text-lg font-bold text-neutral-950">Rp275.000</p>
           </div>
-          <Button className="w-auto h-12 p-2 gap-1.5 text-base font-semibold text-white">
-            Checkout
-          </Button>
+          <a href="/buyer/checkoutPage">
+            <Button className="w-full h-12 p-2 gap-1.5 text-base font-semibold text-white">
+              Checkout
+            </Button>
+          </a>
         </div>
       </section>
 
