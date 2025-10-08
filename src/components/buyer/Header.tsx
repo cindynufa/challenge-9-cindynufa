@@ -44,25 +44,27 @@ export default function Header() {
 
         {/* Cart, Open Store and Profile */}
         <div className="flex flex-row gap-8 items-center cursor-pointer">
-          <div className="relative flex">
-            <Image
-              src="/assets/icons/icon-cart.png"
-              alt="Icon Cart"
-              className="w-6 h-6"
-              width={20}
-              height={20}
-            />
-            <Image
-              src="/assets/icons/icon-cart-notif.png"
-              alt="Icon Cart Notif"
-              className="absolute w-5 h-5 z-50 -top-1/2 left-1/2"
-              width={20}
-              height={20}
-            />
-          </div>
+          <Link href="/buyer/cartPage">
+            <div className="relative flex">
+              <Image
+                src="/assets/icons/icon-cart.png"
+                alt="Icon Cart"
+                className="w-6 h-6"
+                width={20}
+                height={20}
+              />
+              <Image
+                src="/assets/icons/icon-cart-notif.png"
+                alt="Icon Cart Notif"
+                className="absolute w-5 h-5 z-50 -top-1/2 left-1/2"
+                width={20}
+                height={20}
+              />
+            </div>
+          </Link>
 
           <div className="flex flex-row gap-3">
-            <Link href="/buyer/storePage">
+            <Link href="/buyer/openStorePage">
               <div className="flex flex-row h-11 py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
                 <Image
                   src="/assets/icons/icon-store.png"
