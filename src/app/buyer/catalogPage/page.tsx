@@ -290,7 +290,7 @@ export default function CatalogPage() {
                       Latest
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <DropdownMenuLabel>Filter</DropdownMenuLabel>
+                      <DropdownMenuLabel>Sort by</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>Latest</DropdownMenuItem>
                       <DropdownMenuItem>Date</DropdownMenuItem>
