@@ -15,8 +15,8 @@ import Logo from '@/components/ui/logo';
 
 export default function Login() {
   return (
-    <section className="w-full h-full bground">
-      <Card className="w-451 h-auto my-287 mx-auto border-neutral-200">
+    <section className="w-full h-full py-287 bground">
+      <Card className="w-451 h-auto mx-auto border-neutral-200">
         <CardHeader>
           <CardTitle className="mb-1.5">
             <Logo />

@@ -19,20 +19,20 @@ export default function Register() {
 
   return (
     <section className="w-full h-full bground">
-      <Card className="w-451 h-auto my-287 mx-auto border-neutral-200">
-        <CardHeader>
-          <CardTitle className="mb-1.5">
-            <Logo />
-          </CardTitle>
-          <div className="gap-0.5">
-            <h3 className="text-2xl font-bold text-neutral-950">Register</h3>
-            <CardDescription>
-              Just a few steps away from your next favorite purchase
-            </CardDescription>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="py-287">
+        <Card className="w-451 h-auto mx-auto border-neutral-200">
+          <CardHeader>
+            <CardTitle className="mb-1.5">
+              <Logo />
+            </CardTitle>
+            <div className="gap-0.5">
+              <h3 className="text-2xl font-bold text-neutral-950">Register</h3>
+              <CardDescription>
+                Just a few steps away from your next favorite purchase
+              </CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent>
             <div className="flex flex-col gap-4">
               <Input
                 {...register('name')}
@@ -40,7 +40,6 @@ export default function Register() {
                 type="text"
                 placeholder="Name"
                 className="h-14 py-2 px-3"
-                required
               />
               {errors.name && (
                 <p className="text-sm text-accent-red">{errors.name.message}</p>
@@ -51,10 +50,11 @@ export default function Register() {
                 type="email"
                 placeholder="Email"
                 className="h-14 py-2 px-3"
-                required
               />
               {errors.email && (
-                <p className="text-sm text-accent-red">{errors.email.message}</p>
+                <p className="text-sm text-accent-red">
+                  {errors.email.message}
+                </p>
               )}
               <div className="relative flex flex-row items-center justify-between">
                 <Input
@@ -63,7 +63,6 @@ export default function Register() {
                   type="password"
                   placeholder="Password"
                   className="h-14 py-2 px-3"
-                  required
                 />
                 {errors.password && (
                   <p className="text-sm text-accent-red">
@@ -85,7 +84,6 @@ export default function Register() {
                   type="password"
                   placeholder="Confirm Password"
                   className="h-14 py-2 px-3"
-                  required
                 />
                 {errors.confirmPassword && (
                   <p className="text-sm text-accent-red">
@@ -106,29 +104,30 @@ export default function Register() {
                 type="file"
                 placeholder="Avatar"
                 className="w-full h-10 px-3 border border-gray-400 bg-neutral-200 font-bold"
-                required
               />
               {errors.avatar && (
-                <p className="text-sm text-accent-red">{errors.avatar.message as string}</p>
+                <p className="text-sm text-accent-red">
+                  {errors.avatar.message as string}
+                </p>
               )}
             </div>
-          </form>
-        </CardContent>
-        <CardFooter className="flex-col gap-3">
-          <Button
-            type="submit"
-            className="w-full h-12 p-2 gap-1.5 text-base font-semibold text-white"
-          >
-            Submit
-          </Button>
-          <p className="text-base text-neutral-950">
-            Already have an account?{' '}
-            <a href="/login" className="font-bold">
-              <u>Log In</u>
-            </a>
-          </p>
-        </CardFooter>
-      </Card>
+          </CardContent>
+          <CardFooter className="flex-col gap-3">
+            <Button
+              type="submit"
+              className="w-full h-12 p-2 gap-1.5 text-base font-semibold text-white"
+            >
+              Submit
+            </Button>
+            <p className="text-base text-neutral-950">
+              Already have an account?{' '}
+              <a href="/login" className="font-bold">
+                <u>Log In</u>
+              </a>
+            </p>
+          </CardFooter>
+        </Card>
+      </form>
     </section>
   );
 }
