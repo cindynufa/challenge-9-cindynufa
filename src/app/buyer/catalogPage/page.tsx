@@ -150,7 +150,8 @@ export default function CatalogPage() {
       <section className="w-full mt-132 px-120 gap-8">
         <h3 className="text-display-md font-bold text-neutral-950">Catalog</h3>
         <div className="flex flex-row gap-6 mt-4">
-          <div className="grow flex flex-col w-266 h-814 py-4 gap-6 border rounded-12 border-neutral-300">
+          <div className="grow flex flex-col w-266 h-fit py-4 gap-6 border rounded-12 border-neutral-300">
+            
             {/* Categories */}
             <div className="w-auto px-4 gap-2.5">
               <h3 className="text-base font-bold text-neutral-950">FILTER</h3>
@@ -191,7 +192,7 @@ export default function CatalogPage() {
                   placeholder="Minimum Price"
                   className="w-auto h-auto ml-10 right-0 border-0"
                 />
-                <div className="absolute w-38 h-auto p-2 gap-2 left-1 rounded-md bg-neutral-200 text-center">
+                <div className="absolute w-38 p-2 gap-2 left-1 rounded-md bg-neutral-200 text-center">
                   <p className="text-base font-semibold text-neutral-950">Rp</p>
                 </div>
               </div>
@@ -201,7 +202,7 @@ export default function CatalogPage() {
                   placeholder="Maximum Price"
                   className="w-auto h-auto ml-10 right-0 border-0"
                 />
-                <div className="absolute w-38 h-auto p-2 gap-2 left-1 rounded-md bg-neutral-200 text-center">
+                <div className="absolute w-38 p-2 gap-2 left-1 rounded-md bg-neutral-200 text-center">
                   <p className="text-base font-semibold text-neutral-950">Rp</p>
                 </div>
               </div>
