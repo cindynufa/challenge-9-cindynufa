@@ -1,3 +1,5 @@
+'use client';
+
 import Logo from '../ui/logo';
 import Image from 'next/image';
 import { Input } from '../ui/input';

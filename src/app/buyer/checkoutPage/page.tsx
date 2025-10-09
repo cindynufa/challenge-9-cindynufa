@@ -1,3 +1,5 @@
+'use client';
+
 import Footer from '@/components/buyer/Footer';
 import Header from '@/components/buyer/Header';
 import { Input } from '@/components/ui/input';
