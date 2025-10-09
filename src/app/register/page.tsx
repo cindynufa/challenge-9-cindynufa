@@ -105,7 +105,7 @@ export default function Register() {
                 id="avatar"
                 type="file"
                 placeholder="Avatar"
-                className="w-3xs h-10 px-3 border border-gray-400 bg-neutral-200 font-bold"
+                className="w-full h-10 px-3 border border-gray-400 bg-neutral-200 font-bold"
                 required
               />
               {errors.avatar && (
