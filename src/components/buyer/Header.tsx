@@ -3,8 +3,8 @@
 import Logo from '../ui/logo';
 import Image from 'next/image';
 import { Input } from '../ui/input';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Link from 'next/link';
+import BuyerProfile from './BuyerProfile';
 
 export default function Header() {
   return (
@@ -79,13 +79,11 @@ export default function Header() {
               </div>
             </Link>
 
-            <div className="flex flex-row h-11 py-2 px-3 gap-2 items-center border rounded-full border-neutral-300">
-              <Avatar>
-                <AvatarImage src="/assets/images/img-header-1.png" />
-                <AvatarFallback>Photo Profile</AvatarFallback>
-              </Avatar>
-              <p>John Doe</p>
-            </div>
+            <Link href="/buyer/orderListPage">
+              <div className="border rounded-full border-neutral-300">
+                <BuyerProfile />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
